@@ -1,7 +1,7 @@
 
-docker build -t akmaljonsadikov/multi-client:latest -t akmaljonsadikov/multi-client-$SHA -f ./client/Dockerfile ./client
-docker build -t akmaljonsadikov/multi-client:latest -t akmaljonsadikov/multi-server-$SHA -f ./server/Dockerfile ./server
-docker build -t akmaljonsadikov/multi-client:latest -t akmaljonsadikov/multi-worker-$SHA -f ./worker/Dockerfile ./worker
+docker build -t akmaljonsadikov/multi-client:latest -t akmaljonsadikov/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t akmaljonsadikov/multi-client:latest -t akmaljonsadikov/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t akmaljonsadikov/multi-client:latest -t akmaljonsadikov/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push akmaljonsadikov/multi-client:latest
 docker push akmaljonsadikov/multi-server:latest
