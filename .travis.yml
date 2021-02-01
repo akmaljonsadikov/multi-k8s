@@ -23,7 +23,10 @@ before_install:
 script:
   - doocker run -e CI=true akmaljonsadikov/react-test npm test     
 
-
-
+deploy:
+  provider: script
+  script: bash ./deploy.sh
+  on:
+    branch: master
 
 
